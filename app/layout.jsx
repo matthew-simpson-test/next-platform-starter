@@ -1,18 +1,21 @@
-// RootLayout.js
-"use client";  // Add this to mark the component as a Client Component
+// app/layout.js
 
-import '../styles/globals.css';
-import { Footer } from '../components/footer';
-import { Header } from '../components/header';
-import Script from 'next/script';  // Import the Script component
+"use client";  // Marking this component as a Client Component
 
+import '../styles/globals.css';  // Import your global styles
+import { Footer } from '../components/footer';  // Import your footer component
+import { Header } from '../components/header';  // Import your header component
+import Script from 'next/script';  // Import the Next.js Script component
+
+// Define your metadata for SEO
 export const metadata = {
     title: {
         template: '%s | Netlify',
         default: 'Netlify Starter'
-    }
+    },
 };
 
+// Client component for rendering layout with the header, footer, and chat widget
 export default function RootLayout({ children }) {
     return (
         <html lang="en" data-theme="lofi">
