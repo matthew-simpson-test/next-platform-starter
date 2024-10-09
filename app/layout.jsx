@@ -1,19 +1,19 @@
 // app/layout.js
 
-"use client";  // Marking this as a Client Component
+// Define metadata outside the Client Component
+export const metadata = {
+    title: {
+        template: '%s | Netlify',
+        default: 'Netlify Starter',
+    },
+};
+
+"use client";  // This marks the following component as a Client Component
 
 import '../styles/globals.css';  // Import global styles
 import { Footer } from '../components/footer';  // Import your Footer component
 import { Header } from '../components/header';  // Import your Header component
 import Script from 'next/script';  // Import the Script component
-
-// Metadata for the page
-export const metadata = {
-    title: {
-        template: '%s | Netlify',
-        default: 'Netlify Starter'
-    },
-};
 
 // RootLayout component
 export default function RootLayout({ children }) {
