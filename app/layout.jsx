@@ -1,4 +1,6 @@
-// app/layout.js
+// app/layout.jsx
+
+"use client";  // This must be at the very top of the file
 
 // Define metadata outside the Client Component
 export const metadata = {
@@ -7,8 +9,6 @@ export const metadata = {
         default: 'Netlify Starter',
     },
 };
-
-"use client";  // This marks the following component as a Client Component
 
 import '../styles/globals.css';  // Import global styles
 import { Footer } from '../components/footer';  // Import your Footer component
