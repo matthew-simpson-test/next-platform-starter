@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
+import Script from 'next/script';  // Import the Script component
 
 export const metadata = {
     title: {
@@ -23,6 +24,24 @@ export default function RootLayout({ children }) {
                         <Footer />
                     </div>
                 </div>
+                {/* Add the chat widget script here */}
+                <Script
+                    id="puzzle-loader"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `(function (a, b) {
+                            var loader = a.createElement('script');
+                            loader.type = 'text/javascript';
+                            loader.src = 'https://app-cdn.puzzel.com/public/js/pzl_loader.js';
+                            loader.setAttribute('id', 'pzlModuleLoader');
+                            loader.setAttribute('data-customer-id', b);
+                            a.body.append(loader);
+                        })(document, '90125');`,
+                    }}
+                    onError={(e) => {
+                        console.error('Error loading Puzzel script:', e);
+                    }}
+                />
             </body>
         </html>
     );
