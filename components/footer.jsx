@@ -8,7 +8,7 @@ export function Footer() {
                     Next.js on Netlify
                 </Link>
             </p>
-            script type="text/javascript">
+            <script type="text/javascript">
 	(function (a, b) {
 	var loader = a.createElement('script');
 	loader.type = 'text/javascript';
