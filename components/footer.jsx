@@ -8,6 +8,16 @@ export function Footer() {
                     Next.js on Netlify
                 </Link>
             </p>
+            script type="text/javascript">
+	(function (a, b) {
+	var loader = a.createElement('script');
+	loader.type = 'text/javascript';
+	loader.src = 'https://app-cdn.puzzel.com/public/js/pzl_loader.js';
+	loader.setAttribute('id', 'pzlModuleLoader');
+	loader.setAttribute('data-customer-id', b);
+	a.body.append(loader);
+})(document, '90125');
+</script>
         </footer>
     );
 };
